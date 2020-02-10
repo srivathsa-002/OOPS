@@ -1,6 +1,5 @@
 package demo;
 import java.util.ArrayList;
-//ISP Start
 interface IPostCreate
 {
     void createPost(String message);
@@ -10,32 +9,19 @@ interface IPostRead
 {
     void readPost();
 }
-//ISP End
-//SRP Start
-/*class A{
-	void deletePost() {
-		System.out.println("From A");
-	}
-}*/
+
  class Post implements IPostCreate
 {
     Logger errorLogger = new ErrorLogger();
     Database db = new Database(); 
-    public  void createPost(String postMessage) {};
-  //  {
-    //    if(postMessage.startsWith("ERROR"))
-      //  	errorLogger.log(postMessage);
-       // else 
-        //	db.addToDb(postMessage);
-      //logger.log(postMessage);
-        //void readPost()em.out.pritnln
-    //}*/
-   // public void deletePost() {
-    //	System.out.println("From Post");
-    	
-    //}
+    public  void createPost(String postMessage)
+    {
+        if(postMessage.startsWith("ERROR"))
+        	errorLogger.log(postMessage);
+        else 
+        	db.addToDb(postMessage);
+    }
 }
-//SRP End
 class TagPost implements IPostCreate{
 	Database db=new Database();
 	@Override
@@ -44,21 +30,15 @@ class TagPost implements IPostCreate{
 		db.addAsTag(postMessage);
 	}
 }
-//OCP & LSP Start
 class MentionPost extends Post
 {
 	@Override 
     public void createPost(String postMessage)
     {
-       // super.createPost(postMessage);
+        super.createPost(postMessage);
         db.notifyUser(postMessage); 
     }
-	 public void deletePost() {
-	    	System.out.println("From MentionPost");
-	    	
-	    }
 }
-//OCP&LSP End
 class ReadingPost implements IPostRead{
 	Database db = new Database();
 	@Override

@@ -6,14 +6,14 @@ public class Testing {
 	public static void main(String[] args) {
 		//Logger logger = new Logger();
 		//ErrorLogger errorlogger = new ErrorLogger();
-		//Post p = new Post();
-		//p.createPost("Content1");
+		Post p = new Post();
+		p.createPost("Content1");
 		
-		//Post error = new Post();
-		//error.createPost("ERRORContent1");
+		Post error = new Post();
+		error.createPost("ERRORContent1");
 		
 		Post lsp=new MentionPost();
-		lsp.deletePost();
+		lsp.createPost("LSPContent");
 		
 		TagPost tag = new TagPost();
 		tag.createPost("#Content2");
