@@ -51,7 +51,7 @@ class Batsman extends Player implements IBatsman {
 		return jerseyNo;
 	}
 	public void role() {
-		System.out.println("I am a Batsman");
+		System.out.println(batsmanRole);
 	}
 }
 
@@ -64,7 +64,7 @@ class Bowler extends Player implements IBowler {
 		return jerseyNo;
 	}
 	public void role() {
-		System.out.println("I am a Bowler");
+		System.out.println(bowlerRole);
 	}
 }
 
