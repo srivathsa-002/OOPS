@@ -14,32 +14,5 @@ public class Testing {
 	}
 }
 
-abstract class Doctor {
-	private String name;
-	public String getName() {
-		return "Name: " + name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public void description() {
-		System.out.println("I am a Doctor");
-	}
-	public abstract void specialization();
-}
 
-class DentalDoctor extends Doctor {
-	@Override
-	public void specialization() {
-		// TODO Auto-generated method stub
-		System.out.println("Specialization: Dental");
-	}
-}
 
-class SkinDoctor extends Doctor {
-	@Override
-	public void specialization() {
-		// TODO Auto-generated method stub
-		System.out.println("Specialization: Skin");
-	}
-}
