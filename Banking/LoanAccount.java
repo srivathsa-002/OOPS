@@ -1,6 +1,3 @@
-interface ILoan{
-	public void showLoanDetails();
-}
 public class LoanAccount extends Account implements ILoan{
 	private String name;
 	private String ac_no;

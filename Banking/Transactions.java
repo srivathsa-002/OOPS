@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Transactions {
 	private int choice;
 	Scanner sc = new Scanner(System.in);

@@ -1,10 +1,3 @@
-interface IBank{
-	public void setName(String name);
-	public String getName();
-	public void setAcNo(String ac_no);
-	public String getAcNo();
-}
-
 class Account implements IBank{
 	private String name;
 	private String ac_no;
