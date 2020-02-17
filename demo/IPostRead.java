@@ -1,0 +1,4 @@
+interface IPostRead
+{
+    void readPost();
+}

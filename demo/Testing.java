@@ -1,5 +1,3 @@
-package demo;
-
 public class Testing {
 	//Database db = new Database();
 	
